@@ -1,0 +1,11 @@
+# Archivos locales y de configuración
+.env
+php/conexion.php
+
+# Dependencias
+vendor/
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

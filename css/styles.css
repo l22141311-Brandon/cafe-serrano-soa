@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f1ea; /* Color crema */
+    color: #3e2723; /* Café oscuro */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #3e2723;
+    color: white;
+}
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { color: white; text-decoration: none; }
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1000') no-repeat center/cover;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: overlay;
+}
+
+.btn-principal {
+    background-color: #d4a373;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.productos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 200px;
+}
+
+button {
+    background-color: #d4a373;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover { background-color: #b5835a; }
+
+/* --- ESTILOS PARA LAS NOTIFICACIONES FLOTANTES --- */
+.notificacion-flotante {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: #ffffff;
+    color: #3e2723;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    border-top: 5px solid #d4a373;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Clase que activa la animación */
+.notificacion-flotante.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.notificacion-flotante button {
+    margin-top: 20px;
+    background-color: #d4a373;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+    width: auto;
+}
+
+.notificacion-flotante button:hover {
+    background-color: #b5835a;
+}
